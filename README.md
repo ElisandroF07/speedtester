@@ -32,7 +32,7 @@ emsdk\emsdk_env.bat
 ### 2. Compile the C++ Code
 Run the `emcc` (Emscripten C++ Compiler) to generate the Wasm binary and the JavaScript glue code file:
 
-```bash
+```bash 
 emcc speedtest.cpp -o speedtest.js -s EXPORTED_FUNCTIONS="['_reset_test', '_calculate_speed']" -s EXPORTED_RUNTIME_METHODS="['ccall','cwrap']" -s MODULARIZE=1 -s EXPORT_NAME="InitSpeedTestWasm" -O3
 ```
 *Tip: The `-O3` flag ensures the compiler deeply optimizes the resulting WebAssembly code for maximum speed and minimal file size.*
